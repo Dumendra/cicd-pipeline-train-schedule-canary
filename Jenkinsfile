@@ -2,14 +2,14 @@ pipeline {
     agent any
     environment {
         //be sure to replace "dumendra1234" with your own Docker Hub username
-        DOCKER_IMAGE_NAME = "dumendra1234/train-schedule"
+        DOCKER_IMAGE_NAME = "dumendra1234/train-schedule123"
     }
     stages {
         stage('Build') {
             steps {
                 echo 'Running build automation'
                 sh './gradlew build --no-daemon'
-                archiveArtifacts artifacts: 'dist/trainSchedule.zip'
+                archiveArtifacts artifacts: 'dist/trainSchedule123.zip'
             }
         }
         stage('Build Docker Image') {
